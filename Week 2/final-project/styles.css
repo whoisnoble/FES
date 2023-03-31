@@ -12,3 +12,83 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
 }
+
+a {
+    color: #243E63;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.logo {
+    margin-right: 12px;
+    width: 40px;
+}
+
+/*
+
+NAVBAR 
+
+*/
+
+nav {
+    height: 80px;
+    display: flex;
+}
+
+.nav__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav__link {
+    color: #243E63;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav__link--anchor {
+    margin: 0 24px;
+}
+
+.nav__link--anchor-primary {
+    background-color: #6415ff;
+    padding: 12px 32px;
+    border-radius: 50px;
+    color: #f7fafc;
+}
+
+.nav__link--anchor-left {
+    padding-left: 48px;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    border-bottom-width: 0px;
+    font-size: 24px;
+    font-weight: 900;
+    margin-left: 0px;
+}
+
+
+/* 
+
+LANDING
+
+*/
+
+header {
+    height: calc(100vh - 80px);
+}
