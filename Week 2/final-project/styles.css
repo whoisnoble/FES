@@ -56,6 +56,32 @@ nav {
     margin: 0 auto;
 }
 
+.menu--open .menu__backdrop {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu__backdrop {
+    position: absolute;
+    --tw-bg-opacity: 1;
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: 1rem;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: 1.5rem 1.5rem;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+}
+
 .nav__link {
     color: #243E63;
     font-size: 14px;
@@ -98,6 +124,12 @@ nav {
 
 .text--purple {
     color: #6415ff;   
+}
+
+.nav__btn {
+    background: none;
+    border: none;
+    display: none;
 }
 
 /* 
@@ -637,12 +669,14 @@ PRICING
 }
 
 .pricing__plans--container {
+    width: 100%;
     flex-direction: row;
     display: flex;
 }
 
 .plan {
     width: calc(100% / 3);
+    margin-right: 1rem;
 }
 
 .plan__container {
@@ -754,9 +788,9 @@ PRICING
 
 .plan__purchase--button {
     width: 100%;
+    max-width: 192px;
+    padding: 16px 32px;
     border-radius: 9999px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -770,7 +804,6 @@ PRICING
     text-transform: uppercase;
     letter-spacing: 0.05em;
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
-    padding: 0.75rem 2rem;
     font-weight: 700;
     --tw-text-opacity: 1;
     color: rgb(247 250 252 / var(--tw-text-opacity));
@@ -786,7 +819,6 @@ PRICING
     background-color: rgb(247 250 252 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: rgb(100 21 255 / var(--tw-text-opacity));
-    padding: 0.75rem 2rem;
     font-weight: 700;
     --tw-text-opacity: 1;
 }
@@ -797,7 +829,6 @@ PRICING
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 0.75rem 2rem;
     font-weight: 700;
     --tw-text-opacity: 1;
     background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
@@ -928,3 +959,132 @@ FOOTER
     font-size: 0.875rem;
     font-weight: 500;
 }
+
+/*  SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 1024px) {
+    .header__container {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .header__description {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        width: 60%;
+    }
+
+    .header__description--subtitle {
+        font-size: 1.1rem;
+        margin: 12px 0;
+    }
+
+    .header__description--cta {
+        margin: 8px 0;
+    }
+
+    .header__description--title {
+        font-size: 1.875rem;
+    }
+
+    .header__description--ourcustomers {
+        margin: 48px 0px;
+    }
+
+    .header__description--customersimg {
+        padding-right: 0px;
+    }
+
+    .features__title,
+    .pricing__title,
+    .work__info--title,
+    .values__info--title,
+    .steps__info--title {
+        font-size: 2.5rem;
+    }  
+
+    .features__description,
+    .pricing__description,
+    .values__info--description,
+    .work__info--description {
+        font-size: 1rem;
+    }
+
+    .feature {
+        width: calc(100% / 2);
+    }
+
+    .values__info--description {
+        margin-top: 1rem;
+    }
+    
+    .values__title--container {
+        margin-top: 1rem;
+    }
+
+    .values__info--benefits {
+        flex-direction: column;
+        width: 75%;
+    }
+
+    .pricing__plans--container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__link--list {
+        display: none;
+    }
+
+    .nav__btn {
+        display: flex;
+    }
+
+    .plan {
+        max-width: 24rem;
+        width: 100%;
+        margin-right: 0rem;
+    }
+}
+
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+    .header__description {
+        width: 100%;
+    }
+
+    .header__description--input {
+        padding: 1.25rem 0;
+        padding-left: 2rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        width: 100%;
+        outline: none;
+    }
+
+    .header__description--ctabtn {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: static;
+        margin: 1rem auto;
+        border-radius: 9999px;
+        font-weight: 500;
+        width: 100%;
+        outline: none;
+        text-align: center;
+    }
+
+    .feature {
+        width: 100%;
+    }
+    
+    .feature__textcontainer {
+        text-align: center;
+    }
+} 
