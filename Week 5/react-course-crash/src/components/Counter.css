@@ -1,0 +1,11 @@
+
+.counter__container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.number__counter {
+    margin: 0px 24px;
+}
